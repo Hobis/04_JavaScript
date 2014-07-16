@@ -47,6 +47,7 @@
 		,
 		// :: Set Delay
 		set_delay: function(v) {
+			v = isNaN(v) ? 1000 : v;
 			this._delay = (v < 1) ? 1 : v;
 		}
 
@@ -58,6 +59,7 @@
 		,
 		// :: Set RepeatCount
 		set_repeatCount: function(v) {
+			v = isNaN(v) ? 0 : v;
 			this._repeatCount = (v < 0) ? 0 : v;
 		}
 
